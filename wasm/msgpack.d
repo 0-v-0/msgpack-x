@@ -103,10 +103,8 @@ T toBE(T)(in T value) @trusted if(T.sizeof > 1)
 
 extern(C):
 
-__gshared {
-	byte[48<<10] outbuf;
-	size_t pos;
-}
+export byte[48<<10] outbuf;
+size_t pos;
 
 private:
 
@@ -133,8 +131,9 @@ void begin(Format f, Format f16, size_t llen = 16)(size_t len) {
 	}
 }
 
-public:
+public void output(void[] buf);
 
+export:
 void put(ubyte value) {
 	buf ~= value;
 }
@@ -233,4 +232,3 @@ void flush() {
 	}
 }
 
-void output(void[] buf);

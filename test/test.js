@@ -25,7 +25,7 @@ const { encode, decode } = require('../index'),
 		expect(decode(encode(value))).to.deep.equal(value);
 	}
 
-describe('notepack', function () {
+describe('msgpack', function () {
 	this.timeout(10000);
 
 	it('positive fixint', () => {

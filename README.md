@@ -11,6 +11,11 @@ let encoded = notepack.encode({ foo: 'bar' }); // Uint8Array<81 a3 66 6f 6f a3 6
 let decoded = notepack.decode(encoded); // { foo: 'bar' }
 ```
 
+## Note
+
+- `undefined` is encoded as fixext 1 [0, 0] (d4 00 00)
+- `ArrayBuffer`, `TypedArray` are encoded as ext 8/16/32 [0, data]
+
 ## Performance
 
 Test machine: Intel Xeon E5-2689@2.60GHz DDR3 1600MHz

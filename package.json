@@ -1,7 +1,7 @@
 {
   "name": "msgpack-x",
   "version": "0.0.1",
-  "description": "A fast Node.js implementation of the latest MessagePack spec",
+  "description": "A wasm implementation of MessagePack",
   "files": [
     "index.js",
     "dist/*.js"
