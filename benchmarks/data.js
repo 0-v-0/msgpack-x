@@ -51,4 +51,4 @@ for (let i = 1024; i--;) {
 	large.map['b'.repeat(i)] = str('b'.repeat(i));
 }
 
-module.exports = { tiny, small, medium, large };
+export { tiny, small, medium, large };

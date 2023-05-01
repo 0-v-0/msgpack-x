@@ -2,6 +2,7 @@
   "name": "msgpack-x",
   "version": "0.0.1",
   "description": "A wasm implementation of MessagePack",
+  "packageManager": "pnpm@8.3.1",
   "files": [
     "index.js",
     "dist/*.js"
@@ -9,19 +10,23 @@
   "author": "0-v-0 <kduice@qq.com>",
   "license": "MIT",
   "devDependencies": {
-    "@msgpack/msgpack": "~1.12.2",
-    "@types/node": "^17.0.23",
+    "@msgpack/msgpack": "3.0.0-beta2",
+    "@types/node": "^18.16.3",
     "@ygoe/msgpack": "^1.0.3",
     "benchmark": "^2.1.4",
     "benchtable": "^0.1.0",
-    "chai": "^3.5.0",
-    "mefes": "^0.0.2",
-    "mocha": "^3.5.3",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
     "msgpack-js": "^0.3.0",
-    "msgpack-lite": "^0.1.26"
+    "msgpack-lite": "^0.1.26",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "node build test && npx mocha",
-    "build": "node build js"
-  }
+    "test": "npx mocha",
+    "build": "tsup"
+  },
+  "type": "module"
 }
